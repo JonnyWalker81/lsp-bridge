@@ -555,6 +555,7 @@ Possible choices are pyright_ruff, pyright-background-analysis_ruff, jedi_ruff, 
     (fsharp-mode .                                                               "fsautocomplete")
     (beancount-mode .                                                            "beancount-language-server")
     (racket-mode    .                                                            "racket-langserver")
+    (terraform-mode .                                                            "terraform-ls")
     )
   "The lang server rule for file mode."
   :type 'cons)
@@ -650,6 +651,7 @@ Possible choices are pyright_ruff, pyright-background-analysis_ruff, jedi_ruff, 
     svelte-mode-hook
     fsharp-mode-hook
     beancount-mode-hook
+    terraform-mode-hook
     )
   "The default mode hook to enable lsp-bridge."
   :type '(repeat variable))
@@ -723,6 +725,7 @@ you can customize `lsp-bridge-get-workspace-folder' to return workspace folder p
     (go-ts-mode                 . c-basic-offset)       ;Golang
     (svelte-mode                . js-indent-level)      ;Svelte
     (fsharp-mode                . fsharp-indent-offset) ; F#
+    (terraform-mode             . c-basic-offset)
     (default                    . standard-indent)) ; default fallback
   "A mapping from `major-mode' to its indent variable.")
 
